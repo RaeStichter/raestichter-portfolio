@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --tertiary-color: #7e8991;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    /* applies 20px to the top and bottom, then 35px to the left and right*/
+    padding: 10px 0 10px 0;
+    /* background-color: var(--tertiary-color); */
+    /*Added flex elements to the header */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* From the Hero section to make a seamless transition */
+    background-image: url("../images/hero-shapes.jpg");
+    /* opacity:0.3; */
+    /* #p1 {background-color:rgb(255,0,0);opacity:0.6;}  red with opacity */
+    /* Adjusting the background picture size and position to have it match what the customer wants */
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    z-index: 9999;
+}
+header h1 {
+    background-color:var(--primary-color);
+    font-weight: bold;
+    font-size: 3.5vw;
+    /* font-size: 36px; */
+    color: var(--tertiary-color);
+    /* margin: 0;
+    padding: 0; */
+    padding: 5px 10px 5px 30px;
+}
+header a {
+    /* this makes it so there is no underline for the link.  decoration is refering to the line under or a strikethrough */
+    background-color:var(--primary-color);
+    text-decoration: none;
+    color: var(--tertiary-color);
+    padding: 2px 5px .5px 5px;
+    border-bottom: 2px solid;
+    margin: 5px;
+}
+header nav {
+    /* this adds 7px to the top and bottom, but 0px to the left and right */
+    margin: 7px 0;
+}
+/* 
+header nav ul li {
+    display: inline;
+} */
+
+header nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-end;
+    list-style: none;
+    /* margin: 10px; */
+    /* padding: 5px; */
+}
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 2vw; /* Viewport Width based on actual browser and window size.  1.55 is saying that the font size should be roughly 1.55% of the window*/
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    text-shadow: none;
+}
+
+/* --------------------------------------------------Hero Style Start--------------------------------------------------- */
+/* . notation says that we are using a class as our CSS selector. */
+.hero {
+    background-image: url("../images/hero-shapes.jpg");
+    /* Adjusting the background picture size and position to have it match what the customer wants */
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5% 0 0.5% 2.5%; 
+    padding: 5px 20px 5px 10px;
+    line-height: 1.2;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.hero-cta h3 {
+    font-size: 2.5vw;
+    font-style: italic;
+}
+/* Hero Style End */
+
+
+.section-title {
+    font-size: 4vw;
+    color: var(--secondary-color);
+    border-right: 2px solid;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    text-align: right;
+    margin: 0 10px 20px 10px;
+    width: 20%;
+}
+.primary-border {
+    border-color: var(--tertiary-color);
+}
+/* .secondary-border {
+    border-color: var(--tertiary-color);
+} */
+
+/* -------------------------------------------TRAINER SECTION-------------------------------------- */
+/* Trainers in the full group, all 3 trainers, add flexbox content */
+/* .trainers {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
+
+/* General setup for the look of the trainer element */
+/* .trainer {
+    margin: 0 auto 20px auto;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    flex: 1;
+} */
+.bio-info {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Trainer specific image and bio sections */
+.bio-img {
+    width: 35%;
+    /* height: auto; */
+    /* width: 35%;
+    min-height: 200px; */
+    /* display: block; */
+    max-width:100px;
+    max-height:auto;
+    /* width: auto;
+    height: auto; */
+
+    /* width: 100%; 
+    height: 100%;  */
+    object-fit: contain; 
+    /* width: 100%;
+    height: 100%;
+    background-size: cover; */
+
+    /* background-size: cover; */
+    /* display: flex; */
+    margin: 5px;
+    /* align-items: flex-end; */
+    position: relative;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.bio-img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+.bio-text {
+    /* display: flex; */
+    width:65%;
+    text-align: right;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+/* .trainer-img h3 {
+    position: relative;
+    z-index: 9999;
+    font-size: 28px;
+    margin-bottom: 5px;;
+    top: 200px;
+    transition: all 0.6s;
+} */
+/* .trainer-img h4 {
+    position: relative;
+    z-index: 9999;
+    font-size: 22px;
+    top: 200px;
+    transition: all 0.6s 0.15s;
+} */
+/* .trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;  */
+    /*transform: translate(-200px);the trsnaform fuction below does the same thing, just smoother animations*/
+    /*transition: all 0.6s;*/
+/* } */
+/* .trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(252, 225, 56, 0.3), rgba(2, 78, 118, 1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  } */
+/* .trainer:hover .trainer-img::after {
+    opacity: 1;
+    transition: all 0.5s;
+} */
+/* .trainer-1 {
+    background-image: url("../images/portfolio-pic.jpg");
+} */
+.trainer-2 {
+    background-image: url("../images/01-05-trainers/trainer-2.jpg");
+}
+.trainer-3 {
+    background-image: url("../images/01-05-trainers/trainer-3.jpg");
+}
+.trainer-bio {
+    padding: 25px;
+    line-height: 1.3;
+}
+/* TO make it easier to align the trainers (1 and 3 are biased to the left, 2 is to the right), here are general statements */
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.flex-row {
+    display: flex;
+}
+.trainer-bio h3 {
+    font-size: 28px;
+    display: none;
+}
+.trainer-bio h4 {
+    font-weight: lighter;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: none;
+}
+.trainer-bio p {
+    font-size:17px;
+}
